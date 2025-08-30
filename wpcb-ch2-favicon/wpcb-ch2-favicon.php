@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Chapter 2 - Favicon
  * Plugin URI: https://news.google.com
- * Description: Declares a plugin that will be visible in the WordPress Admin Dashboard
+ * Description: Adds a favicon to a WP site
  * Version 1.0.0
  * Author: Brian Abbott
  * Author URI: https://brianabbott.com
