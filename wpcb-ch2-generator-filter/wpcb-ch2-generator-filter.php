@@ -10,6 +10,11 @@
  * License: GPLv2
  */
 
+/**
+ * Notes - this uses preg_replace and checks the type. It seems like if you are going to check the type, you should
+ * just return a xhtml or html tag. If you use pregreplace, there shouldn't be a need to check for html or xhtml.
+ */
+
 function ch2gf_generator_filter( $html, $type ) {
   if ( $type == 'xhtml' ) {
     $html = preg_replace('("WordPress.*?")', '"Brian"', $html );
