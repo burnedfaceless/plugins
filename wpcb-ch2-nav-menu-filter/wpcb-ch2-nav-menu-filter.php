@@ -10,7 +10,7 @@
  * License: GPLv2
  */
 
-functio ch2_new_nav_menu_items( $sorted_menu_items, $args ) {
+function ch2_new_nav_menu_items( $sorted_menu_items, $args ) {
   print_r( $sorted_menu_items );
   return $sorted_menu_items;
 }
