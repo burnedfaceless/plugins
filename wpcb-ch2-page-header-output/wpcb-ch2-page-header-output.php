@@ -54,3 +54,5 @@ function ch2_footer_analytics_code() { ?>
     </script>
 <?php
 }
+
+add_action( 'wp_footer', 'ch2_footer_analytics_code' );
