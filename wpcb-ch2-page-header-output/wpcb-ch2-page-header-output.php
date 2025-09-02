@@ -29,3 +29,28 @@ function ch2pho_page_header_output() { ?>
   </script>
 
 <?php }
+
+function ch2_link_filter_analytics( $the_content ) {
+    $new_content = str_replace( 'href',
+    'onClick="recordOutBoundLink( this ); return false;" href',
+    $the_content );
+    return $new_content;
+}
+
+add_filter( 'the_content', 'ch2_link_filter_analytics', );
+
+function ch2_footer_analytics_code() { ?>
+    <script type="text/javascript">
+        function recordOutBound( link ) {
+            ga( 'send', 'event', 'Outbound Links',
+                'Click',
+                link.href, {
+                    'transport': 'beacon',
+                    'hitCallBack': function() {
+                        document.location = link.href;
+                    }
+                })
+        }
+    </script>
+<?php
+}
